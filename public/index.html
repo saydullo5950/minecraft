@@ -10,55 +10,80 @@
 
 <body class="">
     <header class="fixed w-full bg-blue-500 py-4 px-4 sm:px-16">
-        <nav class="flex justify-between items-center max-w-7xl mx-auto">
+        <nav class="max-w-7xl mx-auto relative flex justify-between items-center">
             <div class="cursor-pointer w-12 h-14">
                 <img src="./images/logo.png" alt="" class="size-full hover:ml-3 transition-all duration-300">
             </div>
-            <div class="hidden lg:block">
-                <ul class="flex items-center gap-9">
-                    <li>
-                        <a id="zom" href="#"
-                            class="text-white uppercase font-medium hover:border-b hover:border-white transition-all duration-200 pb-2">
-                            зомби
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="text-white uppercase font-medium hover:border-b hover:border-white transition-all duration-200 pb-2">
-                            крипер
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="text-white uppercase font-medium hover:border-b hover:border-white transition-all duration-200 pb-2">
-                            ендермен
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="text-white uppercase font-medium hover:border-b hover:border-white transition-all duration-200 pb-2">
-                            визер
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="text-white uppercase font-medium hover:border-b hover:border-white transition-all duration-200 pb-2">
-                            скилет
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="text-white uppercase font-medium hover:border-b hover:border-white transition-all duration-200 pb-2">
-                            дракон
-                        </a>
-                    </li>
-                </ul>
+            <div class="lg:hidden">
+                <button class="navbar-burger flex items-center text-blue-600 p-3">
+                    <img src="./images/hamburger" alt="hamburder" class="size-8">
+                </button>
             </div>
+            <ul
+                class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-12">
+                <li><a class="text-sm text-white font-semibold hover:border-b hover:border-white transition-all duration-200 pb-2"
+                        href="#">Зомби</a></li>
+
+                <li><a class="text-sm text-white font-semibold hover:border-b hover:border-white transition-all duration-200 pb-2"
+                        href="#">Ендер Дракон</a></li>
+
+                <li><a class="text-sm text-white font-semibold hover:border-b hover:border-white transition-all duration-200 pb-2"
+                        href="#">Крипер</a></li>
+
+                <li><a class="text-sm text-white font-semibold hover:border-b hover:border-white transition-all duration-200 pb-2"
+                        href="#">Визер</a></li>
+
+                <li><a class="text-sm text-white font-semibold hover:border-b hover:border-white transition-all duration-200 pb-2"
+                        href="#">Скилет</a></li>
+            </ul>
             <button
-                class="bg-white hover:bg-black text-blue-500 hover:text-white transition-all rounded-lg duration-300 font-semibold uppercase py-3 px-8">
+                class="hidden lg:block bg-white hover:bg-black text-blue-500 hover:text-white transition-all rounded-lg duration-300 font-semibold uppercase py-3 px-8">
                 мобы
             </button>
         </nav>
+        <div class="navbar-menu relative z-50 hidden">
+            <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+            <nav
+                class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+                <div class="flex items-center mb-8">
+                    <a class="mr-auto text-3xl font-bold leading-none" href="#">
+                        <img src="./images/logo.png" alt="" class="w-12 h-14 hover:ml-3 transition-all duration-300">
+                    </a>
+                    <button class="navbar-close">
+                        <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+                <div>
+                    <ul>
+                        <li class="mb-1">
+                            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                                href="#">Зомби</a>
+                        </li>
+                        <li class="mb-1">
+                            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                                href="#">Ендер Дракон</a>
+                        </li>
+                        <li class="mb-1">
+                            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                                href="#">Крипер</a>
+                        </li>
+                        <li class="mb-1">
+                            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                                href="#">Визер</a>
+                        </li>
+                        <li class="mb-1">
+                            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                                href="#">Скилет</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     </header>
     <div class="bg-black py-16 px-4 sm:px-16 pt-36">
         <div class="max-w-7xl mx-auto">
@@ -81,7 +106,7 @@
                 </div>
                 <div class="lg:ml-auto">
                     <img src="./images/zombie.webp" alt="zombie"
-                        class="pr-14 lg:pr-0 hover:pr-8 lg:hover:pr-14 transition-all duration-300">
+                        class="pr-14 lg:pr-0 hover:pr-8 lg:hover:pr-14 transition-all duration-300 h-1/6">
                 </div>
             </div>
         </div>
@@ -91,7 +116,7 @@
             <div class="grid lg:grid-cols-2 items-center">
                 <div class="order-2 sm:order-1 lg:mr-auto mt-8 sm:mt-0">
                     <img src="./images/ender-dracon.png" alt="zombie"
-                        class="sm:pl-14 lg:pl-0 hover:ml-4 lg:hover:ml-14 transition-all duration-300">
+                        class="lg:pl-0 hover:ml-4 lg:hover:ml-14 transition-all duration-300">
                 </div>
                 <div class="order-1 sm:order-2 text-right space-y-5">
                     <h2 class="text-xl sm:text-3xl font-semibold capitalize text-white">
@@ -113,7 +138,7 @@
             </div>
         </div>
     </div>
-    <div class="bg-black py-4 px-4 sm:px-16">
+    <div class="bg-black py-8 px-4 sm:px-16">
         <div class="max-w-7xl mx-auto">
             <h3 class="uppercase text-white text-center font-semibold text-4xl">
                 способности мобов
@@ -159,7 +184,7 @@
                     <h3 class="capitalize text-white text-2xl">
                         скилет
                     </h3>
-                    <div class="flex justify-center mx-auto w-32 h-40">
+                    <div class="flex justify-center mx-auto w-28 h-40">
                         <img src="./images/skilet.png" alt="zombie" class="size-full">
                     </div>
                     <h3 class="text-white text-sm sm:text-lg">
@@ -174,6 +199,227 @@
             </div>
         </div>
     </div>
+    <div class="bg-gray-950 py-8 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-2 gap-y-12 sm:grid-cols-5 py-8">
+                <ul class="space-y-4">
+                    <li class="text-gray-300">
+                        Solutions
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-300">
+                            Marketing
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-300">
+                            Analytics
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-300">
+                            Commerce
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-300">
+                            Insights
+                        </a>
+                    </li>
+                </ul>
+                <ul class="space-y-4">
+                    <li class="text-gray-300">
+                        Solutions
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-300">
+                            Marketing
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-300">
+                            Analytics
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-300">
+                            Commerce
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-300">
+                            Insights
+                        </a>
+                    </li>
+                </ul>
+                <ul class="space-y-4">
+                    <li class="text-gray-300">
+                        Solutions
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-300">
+                            Marketing
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-300">
+                            Analytics
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-300">
+                            Commerce
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-300">
+                            Insights
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-300">
+                            Insights
+                        </a>
+                    </li>
+                </ul>
+                <ul class="space-y-4">
+                    <li class="text-gray-300">
+                        Solutions
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-300">
+                            Marketing
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-300">
+                            Analytics
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-300">
+                            Commerce
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-300">
+                            Insights
+                        </a>
+                    </li>
+                </ul>
+                <div>
+                    <p class="text-gray-400 text-sm/5 font-semibold">
+                        Language & Currency
+                    </p>
+                    <select class="w-full text-white rounded-md border-gray-700 border bg-gray-700 py-2 px-3 mt-4">
+                        <option value="English">English</option>
+                        <option value="English">Menu</option>
+                        <option value="English">Connect</option>
+                        <option value="English">Contact</option>
+                    </select>
+                    <select class="w-full text-white rounded-md border-gray-700 border bg-gray-700 py-2 px-3 mt-4">
+                        <option value="English">English</option>
+                        <option value="English">Menu</option>
+                        <option value="English">Connect</option>
+                        <option value="English">Contact</option>
+                    </select>
+                </div>
+            </div>
+            <div
+                class="sm:flex justify-between space-y-4 border-t-gray-400 border-b-0 border-l-0 border-r-0 border py-8">
+                <div>
+                    <p class="text-gray-400 ext-sm/5 font-semibold uppercase">
+                        Subscribe to our newsletter
+                    </p>
+                    <p class="text-gray-400 mt-2">
+                        The latest news, articles, and resources, sent to your inbox weekly.
+                    </p>
+                </div>
+                <form action="#" class="flex flex-col sm:flex space-y-3">
+                    <input type="email" name="email" placeholder="Enter your email" class="py-2 px-3 rounded-md">
+                    <button class="font-medium rounded-md bg-indigo-500 text-white py-2 px-4">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+            <div
+                class="flex gap-8 flex-col sm:flex sm:justify-between border-t-gray-400 border-b-0 border-l-0 border-r-0 border py-8">
+                <div>
+                    <p class="text-gray-400">
+                        © 2020 Workflow, Inc. All rights reserved.
+                    </p>
+                </div>
+                <div class="flex gap-6">
+                    <svg class="cursor-pointer" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M22 12C22 6.477 17.523 2 12 2C6.477 2 2 6.477 2 12C2 16.991 5.657 21.128 10.438 21.878V14.891H7.898V12H10.438V9.797C10.438 7.291 11.93 5.907 14.215 5.907C15.309 5.907 16.453 6.102 16.453 6.102V8.562H15.193C13.95 8.562 13.563 9.333 13.563 10.124V12H16.336L15.893 14.89H13.563V21.878C18.343 21.128 22 16.991 22 12Z"
+                            fill="#9CA3AF" />
+                    </svg>
+                    <svg class="cursor-pointer" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M22 12C22 6.477 17.523 2 12 2C6.477 2 2 6.477 2 12C2 16.991 5.657 21.128 10.438 21.878V14.891H7.898V12H10.438V9.797C10.438 7.291 11.93 5.907 14.215 5.907C15.309 5.907 16.453 6.102 16.453 6.102V8.562H15.193C13.95 8.562 13.563 9.333 13.563 10.124V12H16.336L15.893 14.89H13.563V21.878C18.343 21.128 22 16.991 22 12Z"
+                            fill="#9CA3AF" />
+                    </svg>
+                    <svg class="cursor-pointer" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M22 12C22 6.477 17.523 2 12 2C6.477 2 2 6.477 2 12C2 16.991 5.657 21.128 10.438 21.878V14.891H7.898V12H10.438V9.797C10.438 7.291 11.93 5.907 14.215 5.907C15.309 5.907 16.453 6.102 16.453 6.102V8.562H15.193C13.95 8.562 13.563 9.333 13.563 10.124V12H16.336L15.893 14.89H13.563V21.878C18.343 21.128 22 16.991 22 12Z"
+                            fill="#9CA3AF" />
+                    </svg>
+                    <svg class="cursor-pointer" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M22 12C22 6.477 17.523 2 12 2C6.477 2 2 6.477 2 12C2 16.991 5.657 21.128 10.438 21.878V14.891H7.898V12H10.438V9.797C10.438 7.291 11.93 5.907 14.215 5.907C15.309 5.907 16.453 6.102 16.453 6.102V8.562H15.193C13.95 8.562 13.563 9.333 13.563 10.124V12H16.336L15.893 14.89H13.563V21.878C18.343 21.128 22 16.991 22 12Z"
+                            fill="#9CA3AF" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Burger menus
+        document.addEventListener('DOMContentLoaded', function () {
+            // open
+            const burger = document.querySelectorAll('.navbar-burger');
+            const menu = document.querySelectorAll('.navbar-menu');
+
+            if (burger.length && menu.length) {
+                for (var i = 0; i < burger.length; i++) {
+                    burger[i].addEventListener('click', function () {
+                        for (var j = 0; j < menu.length; j++) {
+                            menu[j].classList.toggle('hidden');
+                        }
+                    });
+                }
+            }
+
+            // close
+            const close = document.querySelectorAll('.navbar-close');
+            const backdrop = document.querySelectorAll('.navbar-backdrop');
+
+            if (close.length) {
+                for (var i = 0; i < close.length; i++) {
+                    close[i].addEventListener('click', function () {
+                        for (var j = 0; j < menu.length; j++) {
+                            menu[j].classList.toggle('hidden');
+                        }
+                    });
+                }
+            }
+
+            if (backdrop.length) {
+                for (var i = 0; i < backdrop.length; i++) {
+                    backdrop[i].addEventListener('click', function () {
+                        for (var j = 0; j < menu.length; j++) {
+                            menu[j].classList.toggle('hidden');
+                        }
+                    });
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
